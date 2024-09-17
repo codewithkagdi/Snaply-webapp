@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Snaply</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header id="header">
+        <nav id="navbar">
+            <div class="centered-title">Snaply</div>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><button id="search-toggle">Search</button></li>
+            </ul>
+        </nav>
+        <div id="popup-menu" class="popup-menu">
+            <div class="popup-content">
+                <button id="close-popup" class="close-popup">×</button>
+                <ul>
+                    <li><a href="profile.html">User Profile</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="recommendations.html">Recommendations</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="chatbot.html">Chatbot</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="profile" class="section">
+            <div class="profile-header">
+                <div class="profile-photo">
+                    <img src="https://via.placeholder.com/150" alt="User Profile Photo">
+                </div>
+                <div class="profile-info">
+                    <h1>John Doe</h1>
+                    <div class="profile-stats">
+                        <span><strong id="post-count">10</strong> Posts</span>
+                        <!-- Removed followers count -->
+                        <span><strong id="following-count">180</strong> Following</span>
+                    </div>
+                    <button id="edit-profile">Edit Profile</button>
+                </div>
+            </div>
+
+            <div id="posts" class="posts-section">
+                <h2>Posts</h2>
+                <div class="posts-grid">
+                    <div class="post-item">
+                        <img src="https://via.placeholder.com/200" alt="Post Image 1">
+                        <p>Likes: <span class="like-count">120</span></p>
+                    </div>
+                    <div class="post-item">
+                        <img src="https://via.placeholder.com/200" alt="Post Image 2">
+                        <p>Likes: <span class="like-count">89</span></p>
+                    </div>
+                    <div class="post-item">
+                        <img src="https://via.placeholder.com/200" alt="Post Image 3">
+                        <p>Likes: <span class="like-count">150</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Removed followers section -->
+            <!-- Removed chat section -->
+        </section>
+    </main>
+
+    <script src="/script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+/* Logo styling - Adjusted size */
+#logo {
+    width: 150px; /* Adjusted size of the logo */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.centered-title {
+    font-family: 'Pacifico', cursive;
+    color: #ffdb58;
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.8);
+    letter-spacing: 2px;
+    position: fixed;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0%;
+    width: 5000px; /* Adjusted to a smaller width */
+    height: 50px; /* Maintains the aspect ratio */
+}
+.centered-title img{
+    height: 80px;
+    width: 160px;
+}
+#navbar {
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#menu li {
+    margin: 0 15px;
+}
+
+#menu li a,
+#menu li button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Helvetica', sans-serif;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+#menu li a:hover,
+#menu li button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    color: #ffdb58;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+#popup-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1001;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-popup {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.popup-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.popup-content li {
+    margin: 15px 0;
+}
+
+.popup-content li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+    width: 1300px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#search-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #555;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 250px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 70vh;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 18px;
+    border-radius: 3px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#random-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+#random-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.popup-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1001;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-popup {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.popup-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.popup-content li {
+    margin: 15px 0;
+}
+
+.popup-content li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    #popup-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #search-container {
+        display: flex;
+    }
+}
+
+/* Base style for transitions */
+body {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+/* Class to fade out */
+.fade-out {
+    opacity: 0;
+}
+
+/* Class to fade in */
+.fade-in {
+    opacity: 1;
+}
+
+/* Optional: Set a transition for page container */
+.page-container {
+    transition: transform 0.5s ease-in-out;
+}
+
